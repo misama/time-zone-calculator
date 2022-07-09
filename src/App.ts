@@ -28,7 +28,7 @@ app.get('/get-time-zone', async (req: Request, res: Response) => {
 });
 
 app.get('*', (req, res) => {
-    res.json({message: 'I am an API, try http://localhost:8080/api?lat=1&lng=1'});
+    res.json({message: 'I am an API, try http://localhost:8080/get-time-zone?lat=1&lng=1&key={YOUR_OWN_KEY}'});
 });
 
 app.use((err: Error, req: Request, res: Response) => {
@@ -47,7 +47,7 @@ const server = http.createServer(app);
  */
 
 server.listen(PORT, () => {
-    console.log('listing on', PORT)
+    console.log(`listing on http://localhost:${PORT}`)
 });
 server.on('error', onError);
 
