@@ -17,12 +17,12 @@ Using this way will call the api from brrowser directly.
    ```sh
    npm run dev:fe
    ```
-    visit http://localhost:5000 from browser
+   visit http://localhost:5000 from browser
 ## Run Server-Side only
    ```sh
    npm run dev
    ```
-    visit http://localhost:8080/get-time-zone?lat=1&lng=1&key=YOUR_OWN_KEY from browser
+   visit http://localhost:8080/get-time-zone?lat=1&lng=1&key=YOUR_OWN_KEY from browser
 ## Run Application both Front-End and Server-Side: 
 Using this way the Front-End to Server-Side, and thee API will call from Server-Side
    ```sh
