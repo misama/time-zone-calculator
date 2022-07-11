@@ -19,16 +19,18 @@ app.get('/get-time-zone', async (req: Request, res: Response) => {
   const longitude = req.query.lng as string;
   const key = req.query.key as string;
 
-  if(!latitude || !longitude || !key) {
-      res.json({message: 'latitude or longitude or privacy key missed!'});
+  if (!latitude || !longitude || !key) {
+    res.json({ message: 'latitude or longitude or privacy key missed!' });
   }
 
-  const localTime = await getLocalTimeFromService({latitude, longitude, key});
+  const localTime = await getLocalTimeFromService({ latitude, longitude, key });
   res.json(localTime);
 });
 
 app.get('*', (req, res) => {
-    res.json({message: 'I am an API, try http://localhost:8080/get-time-zone?lat=1&lng=1&key={YOUR_OWN_KEY}'});
+  res.json({
+    message: 'I am an API, try http://localhost:8080/get-time-zone?lat=1&lng=1&key={YOUR_OWN_KEY}',
+  });
 });
 
 app.use((err: Error, req: Request, res: Response) => {
@@ -47,7 +49,7 @@ const server = http.createServer(app);
  */
 
 server.listen(PORT, () => {
-    console.log(`listing on http://localhost:${PORT}`)
+  console.log(`listing on http://localhost:${PORT}`);
 });
 server.on('error', onError);
 
