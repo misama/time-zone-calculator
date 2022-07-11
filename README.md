@@ -13,7 +13,7 @@ time-zone-calculator
    ```
 4. Prepare your own API_KEY from https://timezonedb.com/
 ## Run Front-End only
-Using this way will call the api from brrowser directly. 
+**Using this way will call the api from browser directly. 
    ```sh
    npm run dev:fe
    ```
@@ -24,7 +24,7 @@ Using this way will call the api from brrowser directly.
    ```
    visit http://localhost:8080/get-time-zone?lat=1&lng=1&key=YOUR_OWN_KEY from browser
 ## Run Application both Front-End and Server-Side: 
-Using this way the Front-End to Server-Side, and thee API will call from Server-Side
+**Using this way the Front-End to Server-Side, and thee API will call from Server-Side
    ```sh
    npm run build
    npm run start
